@@ -1,11 +1,11 @@
 .header {
-  box-shadow: 0px 4px 10px 2px rgba(50, 30, 179, 0.1);
   width: 1440px;
   height: 64px;
   background-color: #6241ff;
   display: grid;
   grid-template-columns: 3fr 6fr;
   justify-items: center;
+  box-shadow: 0px 4px 10px 2px rgb(50, 30, 179);
 }
 .languageArea {
   display: flex;
@@ -13,24 +13,26 @@
   align-items: center;
 }
 .languageArea .eng {
-  width: 36px;
   height: 26px;
-  font-family: Chakra Petch;
+  font-family: "Chakra Petch";
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 26px;
   color: #000;
+  margin-right: 20px;
+  cursor: pointer;
 }
-.itl {
-  width: 25px;
+.languageArea .itl {
   height: 26px;
-  font-family: Chakra Petch;
+  font-family: "Chakra Petch";
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 26px;
   color: #1e1e1e;
+  margin-right: 20px;
+  cursor: pointer;
 }
 .btn {
   display: flex;
@@ -42,11 +44,12 @@
   background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  cursor: pointer;
 }
 .btn p {
   width: 81px;
   height: 16px;
-  font-family: Noto Sans;
+  font-family: " Noto Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
