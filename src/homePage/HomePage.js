@@ -1,4 +1,4 @@
-import BlueParth from "../components/blueParth/BlueParth";
+import BlueParth from "../components/bluePart/BluePart";
 import Contact from "../components/contact/Contact";
 import Dark from "../components/darkText/Dark";
 import Header from "../components/header/Header";

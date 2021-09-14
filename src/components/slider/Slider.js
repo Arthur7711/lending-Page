@@ -30,8 +30,9 @@ const Slider = ({ info }) => {
         responsive={responsive}
         arrows={false}
       >
-        {info.map((el) => (
+        {info.map((el, i) => (
           <div
+            key={i}
             style={{
               color: el.color,
               height: "47px",

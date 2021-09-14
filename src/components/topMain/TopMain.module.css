@@ -1,4 +1,5 @@
 .topMain {
+  position: relative;
   width: 1440px;
   height: 344.5px;
   background: #6241ff;
@@ -9,11 +10,21 @@
 .info {
   width: 715px;
   height: 117px;
-  font-family: 'Chakra Petch';
-  font-style: normal;
+  font-family: "Chakra Petch";
   font-weight: 600;
   font-size: 90px;
   line-height: 117px;
   text-transform: uppercase;
   color: #ffffff;
+  margin-left: 100px;
+}
+.imgBox {
+  width: 200px;
+  position: absolute;
+  top: 170px;
+  right: 50px;
+  z-index: inherit;
+}
+.imgBox img {
+  width: 100%;
 }

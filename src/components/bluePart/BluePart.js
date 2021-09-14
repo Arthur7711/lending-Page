@@ -1,8 +1,8 @@
 import React from "react";
 import Ext from "../ext/Ext";
-import styles from "./BlueParth.module.css";
+import styles from "./BluePart.module.css";
 
-const BlueParth = () => {
+const BluePart = () => {
   const infoPart = [
     {
       title: "Pay you more",
@@ -23,11 +23,11 @@ const BlueParth = () => {
   ];
   return (
     <main className={styles.main}>
-      {infoPart.map((el) => (
-        <Ext title={el.title} text={el.text} />
+      {infoPart.map((el, i) => (
+        <Ext key={i} title={el.title} text={el.text} />
       ))}
     </main>
   );
 };
 
-export default BlueParth;
+export default BluePart;
