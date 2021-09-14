@@ -32,19 +32,23 @@ const UnderMenu = () => {
     "Get paid in cash for the business you have built ! And if,for any reason, the deal will not be made, don’t worry:you don’t have to pay for the smart transformation wehave delivered to your company, you will keep acompany that is now worth much more.",
   ];
   const [info, setInfo] = useState(inform[0]);
+  const [ind, setInd] = useState("01");
 
   function changeInfo(id) {
-    setInfo(inform[id])
+    setInfo(inform[id]);
+    setInd(`0 ${id + 1}`);
   }
   return (
     <div className={styles.infoPart}>
       <div className={styles.links}>
         {hrefs.map((el) => (
-          <p onClick={()=>changeInfo(el.id)} key={el.id}>{el.title}</p>
+          <p onClick={() => changeInfo(el.id)} key={el.id}>
+            {el.title}
+          </p>
         ))}
       </div>
       <div className={styles.textPart}>
-        <h2>i</h2>
+        <p>{ind}</p>
         <div className={styles.likeP}>{info}</div>
       </div>
     </div>

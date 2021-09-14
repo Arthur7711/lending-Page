@@ -63,6 +63,12 @@
   border: 1px solid #abaaaa;
   box-sizing: border-box;
   border-radius: 5px;
+  padding-left: 16px;
+}
+.forinps input::placeholder{
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 .forMessage input {
   width: 383px;

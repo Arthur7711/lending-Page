@@ -9,7 +9,7 @@ const Contact = () => {
       <div className={styles.left}>
         <LogoPart />
         <p className={styles.text}>
-          Fill up the form and our team will get back to you within 24 hours{" "}
+          Fill up the form and our team will get back to you within 24 hours
         </p>
         <div className={styles.mailPart}>
           <div className={styles.mail}>
