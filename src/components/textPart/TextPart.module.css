@@ -1,0 +1,25 @@
+.textAreas {
+  background: #6241ff;
+  width: 670px;
+  margin: 30px 30px 0 0;
+  height: 440px;
+}
+.textAreas h2 {
+  margin: 30px;
+  height: 70px;
+  font-family: "Chakra Petch";
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 70px;
+  color: #ffffff;
+}
+.textAreas p {
+  margin: 30px;
+  height: 184px;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 46px;
+  color: #ffffff;
+}

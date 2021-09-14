@@ -1,0 +1,28 @@
+.right {
+  width: 670px;
+  height: 440px;
+  background: #ffffff;
+  border: 5px solid #6241ff;
+  box-sizing: border-box;
+  margin: 30px 30px 0 0;
+}
+.right h2 {
+  height: 70px;
+  font-family: Chakra Petch;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 70px;
+  text-align: right;
+  margin: 30px;
+  color: #6241ff;
+}
+.right p {
+  font-family: "Noto Sans";
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 46px;
+  text-align: right;
+  margin: 30px;
+  color: #6241ff;
+}

@@ -1,0 +1,18 @@
+.topMain {
+  width: 1440px;
+  height: 344.5px;
+  background: #6241ff;
+  display: flex;
+  justify-content: space-between;
+}
+.info {
+  width: 715px;
+  height: 117px;
+  font-family: Chakra Petch;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 90px;
+  line-height: 117px;
+  text-transform: uppercase;
+  color: #ffffff;
+}

@@ -1,0 +1,107 @@
+.home {
+  width: 1440px;
+  background: #ffffff;
+}
+.text {
+  height: 62px;
+  font-family: "Chakra Petch";
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 62px;
+  color: #321eb3;
+  text-transform: uppercase;
+  text-align: right;
+}
+.text2 {
+  height: 65px;
+  text-transform: uppercase;
+  font-family: "Chakra Petch";
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 65px;
+  color: #321eb3;
+  text-align: right;
+}
+.underdev {
+  height: 227px;
+  background: #6241ff;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.underdev p {
+  width: 325px;
+  height: 39px;
+  font-family: "Chakra Petch";
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 39px;
+  color: #ffffff;
+}
+.underdev .but {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  margin: 0 50px;
+}
+.underdev .but p {
+  justify-content: center;
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-size: 24.3293px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #1e1e1e;
+  flex: none;
+  margin: 0px 12px;
+}
+.forSlide {
+  padding: 50px 0 50px 0;
+  background: #ffffff;
+  box-shadow: 5px 10px 15px 2px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+footer {
+  margin: 50px;
+}
+footer .logoArea {
+  display: flex;
+  align-items: center;
+}
+footer .logoArea .forLogo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+footer .logoArea .forLogo img {
+  width: 100%;
+}
+
+footer .textArea {
+  width: 125px;
+  height: 31px;
+  font-family: "Chakra Petch";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: #1e1e1e;
+  display: flex;
+}
+footer .textArea span {
+  color: #6241ff;
+}
+
+footer p {
+  font-family: "Chakra Petch";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #4c5862;
+}

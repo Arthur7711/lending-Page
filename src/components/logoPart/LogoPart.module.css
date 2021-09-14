@@ -1,0 +1,27 @@
+.logoArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logoArea .forLogo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+.logoArea .forLogo img {
+  width: 100%;
+}
+
+.textArea {
+  width: 125px;
+  height: 31px;
+  font-family: Chakra Petch;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: #1e1e1e;
+  display: flex;
+}
+.textArea span {
+  color: #fff;
+}
