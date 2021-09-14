@@ -3,7 +3,6 @@ import Contact from "../components/contact/Contact";
 import Dark from "../components/darkText/Dark";
 import Header from "../components/header/Header";
 import IntPart from "../components/intpart/IntPart";
-import LogoPart from "../components/logoPart/LogoPart";
 import Slider from "../components/slider/Slider";
 import TopMain from "../components/topMain/TopMain";
 import UnderMenu from "../components/underMenu/UnderMenu";

@@ -37,8 +37,14 @@ const Contact = () => {
           </div>
         </div>
         <div className={styles.forMessage}>
-            <p>Message</p>
-            <input type='text' />
+          <p>Message</p>
+          <input type="text" />
+        </div>
+        <div></div>
+        <div className={styles.compBtn}>
+          <div className={styles.button}>
+            <p>Send message</p>
+          </div>
         </div>
       </div>
     </div>

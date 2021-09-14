@@ -41,8 +41,9 @@
   color: #ffffff;
 }
 .right {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr 100px;
+  grid-template-columns: 6fr 6fr;
 }
 .lChild {
   margin: 0 50px 0 50px;
@@ -65,10 +66,10 @@
   border-radius: 5px;
   padding-left: 16px;
 }
-.forinps input::placeholder{
-    display: flex;
-    justify-content: start;
-    align-items: center;
+.forinps input::placeholder {
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 .forMessage input {
   width: 383px;
@@ -86,4 +87,22 @@
   display: flex;
   align-items: center;
   color: #4c5862;
+}
+.compBtn {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 30px;
+  margin-right: 50px;
+}
+.button {
+  height: 40px;
+  width: 180px;
+  background-color: #6241ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.button p {
+  color: #ffffff;
 }
