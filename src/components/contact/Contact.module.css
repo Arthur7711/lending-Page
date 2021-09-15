@@ -8,8 +8,9 @@
 }
 .left {
   width: 389px;
-  height: 481px;
+  /* height: 481px; */
   background: #6241ff;
+  position: relative;
 }
 .left .text {
   height: 38px;
@@ -39,6 +40,16 @@
   font-size: 16px;
   line-height: 19px;
   color: #ffffff;
+}
+.left .imgBox {
+  width: 219px;
+  position: absolute;
+  top: 200px;
+  right: -25px;
+  z-index: 1000;
+}
+.left .imgBox img {
+  width: 100%;
 }
 .right {
   display: grid;
@@ -95,13 +106,14 @@
   margin-right: 50px;
 }
 .button {
-  height: 40px;
-  width: 180px;
+  height: 48px;
+  width: 220px;
   background-color: #6241ff;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  margin-top: 20px;
 }
 .button p {
   color: #ffffff;
