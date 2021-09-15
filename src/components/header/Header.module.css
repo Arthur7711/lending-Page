@@ -9,8 +9,9 @@
 }
 .languageArea {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
+  width: 100%;
 }
 .languageArea .eng {
   height: 26px;
@@ -31,7 +32,8 @@
   font-size: 20px;
   line-height: 26px;
   color: #1e1e1e;
-  margin-right: 20px;
   cursor: pointer;
 }
-
+.languageArea:last-child div {
+  margin: 0 50px;
+}

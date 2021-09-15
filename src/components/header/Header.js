@@ -1,6 +1,5 @@
 import React from "react";
 import LogoPart from "../logoPart/LogoPart";
-import MyButton from "../myButton/MyButton";
 import SimplePopover from "../popover/Popover";
 import styles from "./Header.module.css";
 
