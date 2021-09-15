@@ -10,10 +10,10 @@ const Contact = () => {
   const [phone, setPhote] = useState("");
   const [message, setMessage] = useState("");
   const [isValid, setIsValid] = useState({
-    nameValue: "",
-    emailValue: "",
-    phoneValue: "",
-    messageValue: "",
+    nameValue: name,
+    emailValue: email,
+    phoneValue: phone,
+    messageValue: message,
   });
 
   function checkName(e) {
@@ -36,7 +36,9 @@ const Contact = () => {
     setMessage(e.target.value);
   }
 
-  function checking() {}
+  function checking() {
+    
+  }
   return (
     <div className={styles.contact}>
       <div className={styles.left}>
@@ -90,7 +92,7 @@ const Contact = () => {
         </div>
         <div></div>
         <div className={styles.compBtn}>
-          <div className={styles.button}>
+          <div onClick={checking} className={styles.button}>
             <p>Send message</p>
           </div>
         </div>

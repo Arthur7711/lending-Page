@@ -32,7 +32,7 @@ const UnderMenu = () => {
     "Get paid in cash for the business you have built ! And if,for any reason, the deal will not be made, don’t worry:you don’t have to pay for the smart transformation wehave delivered to your company, you will keep acompany that is now worth much more.",
   ];
   const [info, setInfo] = useState(inform[0]);
-  const [ind, setInd] = useState("01");
+  const [ind, setInd] = useState("0 1");
 
   function changeInfo(id) {
     setInfo(inform[id]);
