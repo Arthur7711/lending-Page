@@ -8,7 +8,6 @@
 }
 .left {
   width: 389px;
-  /* height: 481px; */
   background: #6241ff;
   position: relative;
 }
@@ -22,13 +21,14 @@
 }
 .mailPart {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .mail {
   width: 24px;
   height: 24px;
   margin-right: 10px;
+  margin-left: 20px;
 }
 .mail img {
   width: 100%;
