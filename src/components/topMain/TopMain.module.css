@@ -1,11 +1,10 @@
 .topMain {
   position: relative;
-  width: 1440px;
   height: 344.5px;
   background: #6241ff;
   display: flex;
   justify-content: space-between;
-  /* clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%); */
+  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
 }
 .info {
   width: 715px;
@@ -18,13 +17,4 @@
   color: #ffffff;
   margin-left: 100px;
 }
-.imgBox {
-  width: 200px;
-  position: absolute;
-  top: 170px;
-  right: 50px;
-  z-index: 1000;
-}
-.imgBox img {
-  width: 100%;
-}
+

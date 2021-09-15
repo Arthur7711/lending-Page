@@ -8,6 +8,8 @@ import TopMain from "../components/topMain/TopMain";
 import UnderMenu from "../components/underMenu/UnderMenu";
 import logo from "../imgs/shuttle.png";
 import styles from "./HomePage.module.css";
+import imgLog from "../imgs/shuttle.png";
+
 
 const HomePage = () => {
   const info = [
@@ -21,7 +23,10 @@ const HomePage = () => {
     <div className={styles.home}>
       <Header />
       <TopMain />
-      <div >
+      <div className={styles.relet}>
+      <div className={styles.imgBox}>
+        <img alt="imgLog" src={imgLog} />
+      </div>
         <p className={styles.text}>and, leveraging our community of experts</p>
         <p className={styles.text2}>we lead them to the next level ...</p>
       </div>

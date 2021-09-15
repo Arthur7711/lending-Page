@@ -40,6 +40,9 @@ const Slider = ({ info }) => {
               fontWeight: "600",
               fontSize: "36px",
               lineHeight: "47px",
+              display: "flex",
+              justifyContent: "center",
+              userSelect: "none",
             }}
           >
             {el.text}
