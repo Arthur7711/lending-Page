@@ -2,12 +2,12 @@ import LogoPart from "../logoPart/LogoPart";
 import styles from "./Contact.module.css";
 import mail from "../../imgs/Message.png";
 import img from "../../imgs/shuttle.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhote] = useState("");
+  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [isValid, setIsValid] = useState({
     nameValue: name,
@@ -17,28 +17,57 @@ const Contact = () => {
   });
 
   function checkName(e) {
-    console.log(e.target.value);
     setName(e.target.value);
   }
 
   function checkEmail(e) {
-    console.log(e.target.value);
     setEmail(e.target.value);
   }
 
   function checkPhone(e) {
-    console.log(e.target.value);
-    setPhote(e.target.value);
+    setPhone(e.target.value);
   }
 
   function checkMessage(e) {
-    console.log(e.target.value);
     setMessage(e.target.value);
   }
 
+  useEffect(() => {
+    setIsValid({
+      nameValue: name,
+      emailValue: email,
+      phoneValue: phone,
+      messageValue: message,
+    });
+  }, [name, email, phone, message]);
+
   function checking() {
-    
+    if (name.length < 1 || name.length >= 255) {
+      console.log("forgot name");
+      return;
+    }
+    const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!re.test(String(email).toLowerCase())) {
+      alert("wrong email");
+      return;
+    }
+    if (typeof Number(phone) === "number") {
+      alert("wrong phone number");
+      return;
+    }
+    if (message.length < 1) {
+      alert("forgot message");
+      return;
+    }
+    console.log(JSON.stringify(isValid));
+    setName("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+    return true;
   }
+
   return (
     <div className={styles.contact}>
       <div className={styles.left}>
