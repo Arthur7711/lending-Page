@@ -44,7 +44,7 @@
   clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0 100%);
   padding-right: 100px;
 }
-.underdev p {
+.underdev .forThisP {
   height: 39px;
   font-family: "Chakra Petch";
   font-weight: 600;

@@ -31,7 +31,7 @@ const HomePage = () => {
         <p className={styles.text2}>we lead them to the next level ...</p>
       </div>
       <div className={styles.underdev}>
-        <p>Curious to know more?</p>
+        <p className={styles.forThisP}>Curious to know more?</p>
         <AlertDialog widthP="285px" heightP="60px" fontP="24px" />
       </div>
       <Dark text="Our community includex experts in many fields" />
