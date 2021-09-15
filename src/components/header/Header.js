@@ -1,5 +1,7 @@
 import React from "react";
 import LogoPart from "../logoPart/LogoPart";
+import MyButton from "../myButton/MyButton";
+import SimplePopover from "../popover/Popover";
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -9,9 +11,7 @@ const Header = () => {
       <div className={styles.languageArea}>
         <div className={styles.eng}>Eng</div>
         <div className={styles.itl}>Itl</div>
-        <div className={styles.btn}>
-          <p>Book a call</p>
-        </div>
+        <SimplePopover />
       </div>
     </div>
   );

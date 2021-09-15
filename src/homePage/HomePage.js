@@ -21,7 +21,7 @@ const HomePage = () => {
     <div className={styles.home}>
       <Header />
       <TopMain />
-      <div>
+      <div >
         <p className={styles.text}>and, leveraging our community of experts</p>
         <p className={styles.text2}>we lead them to the next level ...</p>
       </div>

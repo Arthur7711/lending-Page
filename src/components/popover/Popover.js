@@ -1,51 +1,99 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Popover from '@material-ui/core/Popover';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import React from "react";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
+// import Button from "@material-ui/core/Button";
+// import Avatar from '@material-ui/core/Avatar';
+// import List from '@material-ui/core/List';
+// import ListItem from '@material-ui/core/ListItem';
+// import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+// import ListItemText from '@material-ui/core/ListItemText';
+import DialogTitle from "@material-ui/core/DialogTitle";
+import Dialog from "@material-ui/core/Dialog";
+// import PersonIcon from '@material-ui/icons/Person';
+// import AddIcon from '@material-ui/icons/Add';
+// import Typography from "@material-ui/core/Typography";
+// import { blue } from "@material-ui/core/colors";
+import MyButton from "../myButton/MyButton";
 
-const useStyles = makeStyles((theme) => ({
-  typography: {
-    padding: theme.spacing(2),
-  },
-}));
+// const emails = ["username@gmail.com", "user02@gmail.com"];
+// const useStyles = makeStyles({
+//   avatar: {
+//     backgroundColor: blue[100],
+//     color: blue[600],
+//   },
+// });
 
-export default function SimplePopover() {
-  const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+function SimpleDialog(props) {
+  // const classes = useStyles();
+  const { onClose, selectedValue, open } = props;
 
   const handleClose = () => {
-    setAnchorEl(null);
+    onClose(selectedValue);
   };
 
-  const open = Boolean(anchorEl);
-  const id = open ? 'simple-popover' : undefined;
+  const handleListItemClick = (value) => {
+    onClose(value);
+  };
+
+  return (
+    <Dialog
+      onClose={handleClose}
+      aria-labelledby="simple-dialog-title"
+      open={open}
+    >
+      <DialogTitle id="simple-dialog-title">Set backup account</DialogTitle>
+      {/* <List>
+        {emails.map((email) => (
+          <ListItem button onClick={() => handleListItemClick(email)} key={email}>
+            <ListItemAvatar>
+              <Avatar className={classes.avatar}>
+                <PersonIcon />
+              </Avatar>
+            </ListItemAvatar>
+            <ListItemText primary={email} />
+          </ListItem>
+        ))}
+
+        <ListItem autoFocus button onClick={() => handleListItemClick('addAccount')}>
+          <ListItemAvatar>
+            <Avatar>
+              <AddIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText primary="Add account" />
+        </ListItem>
+      </List> */}
+    </Dialog>
+  );
+}
+
+SimpleDialog.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
+  selectedValue: PropTypes.string.isRequired,
+};
+
+export default function SimpleDialogDemo() {
+  const [open, setOpen] = React.useState(false);
+  // const [selectedValue, setSelectedValue] = React.useState(emails[1]);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (value) => {
+    setOpen(false);
+    // setSelectedValue(value);
+  };
 
   return (
     <div>
-      <Button aria-describedby={id} variant="contained" color="primary" onClick={handleClick}>
-        Open Popover
-      </Button>
-      <Popover
-        id={id}
+      <MyButton fn={()=>handleClickOpen} />
+      <SimpleDialog
+        // selectedValue={selectedValue}
         open={open}
-        anchorEl={anchorEl}
         onClose={handleClose}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'center',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'center',
-        }}
-      >
-        <Typography className={classes.typography}>The content of the Popover.</Typography>
-      </Popover>
+      />
     </div>
   );
 }
