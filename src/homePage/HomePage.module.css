@@ -42,6 +42,7 @@
   align-items: center;
   justify-content: end;
   clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0 100%);
+  padding-right: 100px;
 }
 .underdev p {
   width: 325px;
@@ -51,30 +52,6 @@
   font-size: 30px;
   line-height: 39px;
   color: #ffffff;
-}
-.underdev .but {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background: #ffffff;
-  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
-  margin: 0 50px;
-}
-.underdev .but p {
-  justify-content: center;
-  font-family: "Noto Sans";
-  font-weight: 500;
-  font-size: 24.3293px;
-  line-height: 20px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #1e1e1e;
-  flex: none;
-  margin: 0px 12px;
 }
 .forSlide {
   padding: 50px 0 50px 0;
@@ -97,7 +74,6 @@ footer .logoArea .forLogo {
 footer .logoArea .forLogo img {
   width: 100%;
 }
-
 footer .textArea {
   width: 125px;
   height: 31px;
@@ -111,7 +87,6 @@ footer .textArea {
 footer .textArea span {
   color: #6241ff;
 }
-
 footer p {
   font-family: "Chakra Petch";
   font-weight: 500;

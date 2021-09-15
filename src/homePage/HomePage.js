@@ -9,7 +9,7 @@ import UnderMenu from "../components/underMenu/UnderMenu";
 import logo from "../imgs/shuttle.png";
 import styles from "./HomePage.module.css";
 import imgLog from "../imgs/shuttle.png";
-
+import AlertDialog from "../components/popover/Popover";
 
 const HomePage = () => {
   const info = [
@@ -24,17 +24,15 @@ const HomePage = () => {
       <Header />
       <TopMain />
       <div className={styles.relet}>
-      <div className={styles.imgBox}>
-        <img alt="imgLog" src={imgLog} />
-      </div>
+        <div className={styles.imgBox}>
+          <img alt="imgLog" src={imgLog} />
+        </div>
         <p className={styles.text}>and, leveraging our community of experts</p>
         <p className={styles.text2}>we lead them to the next level ...</p>
       </div>
       <div className={styles.underdev}>
         <p>Curious to know more?</p>
-        <div className={styles.but}>
-          <p>Book a call</p>
-        </div>
+        <AlertDialog widthP="285px" heightP="60px" fontP="24px" />
       </div>
       <Dark text="Our community includex experts in many fields" />
       <div className={styles.forSlide}>

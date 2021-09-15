@@ -1,6 +1,6 @@
 import React from "react";
 import LogoPart from "../logoPart/LogoPart";
-import SimplePopover from "../popover/Popover";
+import AlertDialog from "../popover/Popover";
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
       <div className={styles.languageArea}>
         <div className={styles.eng}>Eng</div>
         <div className={styles.itl}>Itl</div>
-        <SimplePopover />
+        <AlertDialog widthP="144px" heightP="38px" fontP="16px" />
       </div>
     </div>
   );

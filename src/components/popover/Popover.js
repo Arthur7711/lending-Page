@@ -1,14 +1,12 @@
 import React from "react";
 import MyButton from "../myButton/MyButton";
 import logo from "../../imgs/shuttle.png";
-import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 
-export default function AlertDialog() {
+export default function AlertDialog(props) {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -46,7 +44,7 @@ export default function AlertDialog() {
     alignItems: "center",
     borderRadius: 5,
     marginTop: 20,
-    cursor:'pointer'
+    cursor: "pointer",
   };
   const buttonP = {
     color: "#ffffff",
@@ -54,7 +52,12 @@ export default function AlertDialog() {
 
   return (
     <div>
-      <MyButton fn={() => handleClickOpen} />
+      <MyButton
+        widthP={props.widthP}
+        heightP={props.heightP}
+        fontP={props.fontP}
+        fn={() => handleClickOpen}
+      />
       <Dialog
         open={open}
         onClose={handleClose}
@@ -96,7 +99,7 @@ export default function AlertDialog() {
           </div>
         </DialogContent>
         <DialogActions>
-          <div style={button} onClick={()=>handleClose()}>
+          <div style={button} onClick={() => handleClose()}>
             <p style={buttonP}>Send message</p>
           </div>
         </DialogActions>
