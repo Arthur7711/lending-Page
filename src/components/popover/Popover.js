@@ -1,99 +1,106 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { makeStyles } from "@material-ui/core/styles";
-// import Button from "@material-ui/core/Button";
-// import Avatar from '@material-ui/core/Avatar';
-// import List from '@material-ui/core/List';
-// import ListItem from '@material-ui/core/ListItem';
-// import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-// import ListItemText from '@material-ui/core/ListItemText';
-import DialogTitle from "@material-ui/core/DialogTitle";
-import Dialog from "@material-ui/core/Dialog";
-// import PersonIcon from '@material-ui/icons/Person';
-// import AddIcon from '@material-ui/icons/Add';
-// import Typography from "@material-ui/core/Typography";
-// import { blue } from "@material-ui/core/colors";
 import MyButton from "../myButton/MyButton";
+import logo from "../../imgs/shuttle.png";
+import Button from "@material-ui/core/Button";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
 
-// const emails = ["username@gmail.com", "user02@gmail.com"];
-// const useStyles = makeStyles({
-//   avatar: {
-//     backgroundColor: blue[100],
-//     color: blue[600],
-//   },
-// });
-
-function SimpleDialog(props) {
-  // const classes = useStyles();
-  const { onClose, selectedValue, open } = props;
-
-  const handleClose = () => {
-    onClose(selectedValue);
-  };
-
-  const handleListItemClick = (value) => {
-    onClose(value);
-  };
-
-  return (
-    <Dialog
-      onClose={handleClose}
-      aria-labelledby="simple-dialog-title"
-      open={open}
-    >
-      <DialogTitle id="simple-dialog-title">Set backup account</DialogTitle>
-      {/* <List>
-        {emails.map((email) => (
-          <ListItem button onClick={() => handleListItemClick(email)} key={email}>
-            <ListItemAvatar>
-              <Avatar className={classes.avatar}>
-                <PersonIcon />
-              </Avatar>
-            </ListItemAvatar>
-            <ListItemText primary={email} />
-          </ListItem>
-        ))}
-
-        <ListItem autoFocus button onClick={() => handleListItemClick('addAccount')}>
-          <ListItemAvatar>
-            <Avatar>
-              <AddIcon />
-            </Avatar>
-          </ListItemAvatar>
-          <ListItemText primary="Add account" />
-        </ListItem>
-      </List> */}
-    </Dialog>
-  );
-}
-
-SimpleDialog.propTypes = {
-  onClose: PropTypes.func.isRequired,
-  open: PropTypes.bool.isRequired,
-  selectedValue: PropTypes.string.isRequired,
-};
-
-export default function SimpleDialogDemo() {
+export default function AlertDialog() {
   const [open, setOpen] = React.useState(false);
-  // const [selectedValue, setSelectedValue] = React.useState(emails[1]);
 
   const handleClickOpen = () => {
     setOpen(true);
   };
 
-  const handleClose = (value) => {
+  const handleClose = () => {
     setOpen(false);
-    // setSelectedValue(value);
+  };
+  const forP = {
+    height: 16,
+    fontFamily: "Noto Sans",
+    fontWeight: 500,
+    fontSize: 18,
+    lineHeight: 16,
+    display: "flex",
+    alignItems: "center",
+    color: " #4c5862",
+  };
+  const forInp = {
+    width: 330,
+    height: 48,
+    border: "1px solid #abaaaa",
+    boxSizing: "border-box",
+    borderRadius: 5,
+    paddingLeft: 16,
+  };
+
+  const button = {
+    height: 48,
+    width: 220,
+    backgroundColor: "#6241ff",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 5,
+    marginTop: 20,
+    cursor:'pointer'
+  };
+  const buttonP = {
+    color: "#ffffff",
   };
 
   return (
     <div>
-      <MyButton fn={()=>handleClickOpen} />
-      <SimpleDialog
-        // selectedValue={selectedValue}
+      <MyButton fn={() => handleClickOpen} />
+      <Dialog
         open={open}
         onClose={handleClose}
-      />
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "start",
+              alignItems: "center",
+              marginLeft: 20,
+            }}
+          >
+            <div style={{ width: 24, height: 24, marginRight: 10 }}>
+              <img width="100%" alt="logo" src={logo} />
+            </div>
+            <p
+              style={{
+                fontFamily: "Chakra Petch",
+                fontWeight: 500,
+                fontSize: 24,
+                color: "#1E1E1E",
+              }}
+            >
+              Equire
+            </p>
+          </div>
+        </DialogTitle>
+        <DialogContent id="alert-dialog-description">
+          <div>
+            <p style={forP}>Name</p>
+            <input style={forInp} type="text" placeholder="Name" />
+          </div>
+          <div>
+            <p style={forP}>Phone</p>
+            <input style={forInp} type="text" placeholder="+123 568 6354" />
+          </div>
+        </DialogContent>
+        <DialogActions>
+          <div style={button} onClick={()=>handleClose()}>
+            <p style={buttonP}>Send message</p>
+          </div>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 }
