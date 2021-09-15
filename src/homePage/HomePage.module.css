@@ -45,13 +45,13 @@
   padding-right: 100px;
 }
 .underdev p {
-  width: 325px;
   height: 39px;
   font-family: "Chakra Petch";
   font-weight: 600;
   font-size: 30px;
   line-height: 39px;
   color: #ffffff;
+  margin-right: 50px;
 }
 .forSlide {
   padding: 50px 0 50px 0;

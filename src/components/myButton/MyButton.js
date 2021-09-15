@@ -7,7 +7,7 @@ export default function MyButton(props) {
       onClick={props.fn()}
       className={styles.btn}
     >
-      <p style={{fontSize:props.fontP}}>Book a call</p>
+      <p style={{ fontSize: props.fontP }}>Book a call</p>
     </div>
   );
 }
