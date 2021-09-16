@@ -7,30 +7,21 @@ import img1 from "../../imgs/Rectangle 673.png";
 import img2 from "../../imgs/Rectangle 674.png";
 import img3 from "../../imgs/Rectangle 675.png";
 import img4 from "../../imgs/Rectangle 676.png";
+import { useTranslation } from "react-i18next";
 
 const IntPart = () => {
+  const { t, i18n } = useTranslation();
+
   return (
     <div className={styles.int}>
-      <TextPart
-        title="Product"
-        text="We will infuse Artificial Intelligence in your products and will bring the technology expertise to make it stand against competition"
-      />
+      <TextPart title="Product" text={t("ProductText")} />
       <ImageComp img={img1} />
       <ImageComp img={img2} />
-      <RightPart
-        title="Marketing"
-        text=" We will enhance your customer experience and bring visibility to your products thanks to a strong digital marketing expertise"
-      />
-      <TextPart
-        title="People"
-        text="We will boost your human capital productivity thanks to our world-class agile management strategy and make your company attractive for global talents"
-      />
+      <RightPart title="Marketing" text={t("MarketingText")} />
+      <TextPart title="People" text={t("PeopleText")} />
       <ImageComp img={img3} />
       <ImageComp img={img4} />
-      <RightPart
-        title="Taxes"
-        text="Our Tax consultant will make sure your money strategy is optimized and can generate value to the company"
-      />
+      <RightPart title="Taxes" text={t("TaxesText")} />
     </div>
   );
 };

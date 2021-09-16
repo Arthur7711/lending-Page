@@ -10,45 +10,43 @@ import logo from "../imgs/shuttle.png";
 import styles from "./HomePage.module.css";
 import imgLog from "../imgs/shuttle.png";
 import AlertDialog from "../components/popover/Popover";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
-  const {t, i18n} = useTranslation()
+  const { t, i18n } = useTranslation();
   const info = [
-    { text: "Blockchin technology", color: "blue" },
-    { text: "Artificial inteligence", color: "red" },
-    { text: "Digital", color: "orange" },
-    { text: "Agile management", color: "blue" },
-    { text: "Technology", color: "orange" },
+    { text: t("it1"), color: "blue" },
+    { text: t("it2"), color: "red" },
+    { text: t("it3"), color: "orange" },
+    { text: t("it4"), color: "blue" },
+    { text: t("it5"), color: "orange" },
   ];
-  console.log(t(''));
   return (
     <div className={styles.home}>
-      {t('welcome')}
       <Header />
       <TopMain />
       <div className={styles.relet}>
         <div className={styles.imgBox}>
           <img alt="imgLog" src={imgLog} />
         </div>
-        <p className={styles.text}>and, leveraging our community of experts</p>
-        <p className={styles.text2}>we lead them to the next level ...</p>
+        <p className={styles.text}>{t("homeText1")}</p>
+        <p className={styles.text2}>{t("homeText2")}</p>
       </div>
       <div className={styles.underdev}>
-        <p className={styles.forThisP}>Curious to know more?</p>
+        <p className={styles.forThisP}>{t("curious")}</p>
         <AlertDialog widthP="285px" heightP="60px" fontP="24px" />
       </div>
-      <Dark text="Our community includex experts in many fields" />
+      <Dark text={t("dark1")} />
       <div className={styles.forSlide}>
         <Slider info={info} />
       </div>
-      <Dark text="Ready to sell your company?" />
+      <Dark text={t("dark2")} />
       <BlueParth />
-      <Dark text="Your company will be in safe hands..." />
+      <Dark text={t("dark3")} />
       <IntPart />
-      <Dark text="To sell your company it takes only 6 steps " />
+      <Dark text={t("dark4")} />
       <UnderMenu />
-      <Dark text="Contact us" />
+      <Dark text={t("dark5")} />
       <Contact />
       <footer>
         <div className={styles.logoArea}>

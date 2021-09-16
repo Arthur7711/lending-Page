@@ -20,6 +20,7 @@ const Slider = ({ info }) => {
       items: 1,
     },
   };
+  
   return (
     <>
       <Carousel

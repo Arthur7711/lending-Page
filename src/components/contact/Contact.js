@@ -3,6 +3,7 @@ import styles from "./Contact.module.css";
 import mail from "../../imgs/Message.png";
 import img from "../../imgs/shuttle.png";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -15,6 +16,7 @@ const Contact = () => {
     phoneValue: phone,
     messageValue: message,
   });
+  const { t, i18n } = useTranslation();
 
   function checkName(e) {
     setName(e.target.value);
@@ -72,9 +74,7 @@ const Contact = () => {
     <div className={styles.contact}>
       <div className={styles.left}>
         <LogoPart />
-        <p className={styles.text}>
-          Fill up the form and our team will get back to you within 24 hours
-        </p>
+        <p className={styles.text}>{t("contactP")}</p>
         <div className={styles.mailPart}>
           <div className={styles.mail}>
             <img alt="mail" src={mail} />
@@ -122,7 +122,7 @@ const Contact = () => {
         <div></div>
         <div className={styles.compBtn}>
           <div onClick={checking} className={styles.button}>
-            <p>Send message</p>
+            <p>{t("contactBtn")}</p>
           </div>
         </div>
       </div>

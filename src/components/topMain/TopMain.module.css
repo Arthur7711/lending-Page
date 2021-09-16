@@ -1,13 +1,10 @@
 .topMain {
-  height: 344.5px;
   background: #6241ff;
   display: flex;
   justify-content: space-between;
   clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
 }
 .info {
-  width: 715px;
-  height: 117px;
   font-family: "Chakra Petch";
   font-weight: 600;
   font-size: 90px;

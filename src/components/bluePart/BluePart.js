@@ -1,24 +1,27 @@
 import React from "react";
 import Ext from "../ext/Ext";
 import styles from "./BluePart.module.css";
+import { useTranslation } from "react-i18next";
 
 const BluePart = () => {
+  const { t, i18n } = useTranslation();
+
   const infoPart = [
     {
-      title: "Pay you more",
-      text: "Whatever the value of your company is, we pay you up to 20% more",
+      title: t("inf1Title"),
+      text: t("inf1Text"),
     },
     {
-      title: "Business continuity",
-      text: "Our technology leaders will make your company flourish!",
+      title: t("inf2Title"),
+      text: t("inf2Text"),
     },
     {
-      title: "Doing it quickly",
-      text: "We cut out the unnecessary steps to make selling your company stress-free ",
+      title: t("inf3Title"),
+      text: t("inf3Text"),
     },
     {
-      title: "Satisfied or reimbursed",
-      text: "We kick-start the smart transformation during the due-diligence. If the deal won’t be made your company will worth a lot more, without having to pay for it",
+      title: t("inf4Title"),
+      text: t("inf4Text"),
     },
   ];
   return (
