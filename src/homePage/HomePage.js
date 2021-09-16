@@ -10,8 +10,10 @@ import logo from "../imgs/shuttle.png";
 import styles from "./HomePage.module.css";
 import imgLog from "../imgs/shuttle.png";
 import AlertDialog from "../components/popover/Popover";
+import { useTranslation } from 'react-i18next';
 
 const HomePage = () => {
+  const {t, i18n} = useTranslation()
   const info = [
     { text: "Blockchin technology", color: "blue" },
     { text: "Artificial inteligence", color: "red" },
@@ -19,8 +21,10 @@ const HomePage = () => {
     { text: "Agile management", color: "blue" },
     { text: "Technology", color: "orange" },
   ];
+  console.log(t(''));
   return (
     <div className={styles.home}>
+      {t('welcome')}
       <Header />
       <TopMain />
       <div className={styles.relet}>
