@@ -3,7 +3,7 @@ import styles from "./UnderMenu.module.css";
 import { useTranslation } from "react-i18next";
 
 const UnderMenu = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const hrefs = [
     { id: 0, title: t("Link1") },

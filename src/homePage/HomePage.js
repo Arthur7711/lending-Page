@@ -13,7 +13,7 @@ import AlertDialog from "../components/popover/Popover";
 import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const info = [
     { text: t("it1"), color: "blue" },
     { text: t("it2"), color: "red" },

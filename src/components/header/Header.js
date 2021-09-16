@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import LogoPart from "../logoPart/LogoPart";
 import AlertDialog from "../popover/Popover";
@@ -14,7 +14,6 @@ const Header = () => {
     color: "#fff",
     borderBottom: "2px solid #fff",
   };
-  console.log(localStorage.getItem('en'));
   return (
     <div className={styles.header}>
       <LogoPart />

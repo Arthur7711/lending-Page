@@ -10,7 +10,7 @@ import img4 from "../../imgs/Rectangle 676.png";
 import { useTranslation } from "react-i18next";
 
 const IntPart = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className={styles.int}>

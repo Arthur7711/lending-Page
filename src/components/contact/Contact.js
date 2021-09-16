@@ -16,7 +16,7 @@ const Contact = () => {
     phoneValue: phone,
     messageValue: message,
   });
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   function checkName(e) {
     setName(e.target.value);

@@ -4,7 +4,7 @@ import styles from "./BluePart.module.css";
 import { useTranslation } from "react-i18next";
 
 const BluePart = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const infoPart = [
     {

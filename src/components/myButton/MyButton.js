@@ -1,9 +1,8 @@
 import styles from "./MyButton.module.css";
 import { useTranslation } from "react-i18next";
 
-
 export default function MyButton(props) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div
@@ -11,7 +10,7 @@ export default function MyButton(props) {
       onClick={props.fn()}
       className={styles.btn}
     >
-      <p style={{ fontSize: props.fontP }}>{t('buttonText')}</p>
+      <p style={{ fontSize: props.fontP }}>{t("buttonText")}</p>
     </div>
   );
 }
