@@ -46,15 +46,17 @@ const UnderMenu = () => {
     <div className={styles.infoPart}>
       <div className={styles.links}>
         {hrefs.map((el) => (
-          <div className={styles.elStyle}>
+          <div key={el.id} className={styles.elStyle}>
             <p
               style={select === el.id ? activeStyles : null}
               onClick={() => changeInfo(el.id)}
-              key={el.id}
             >
               {el.title}
             </p>
-            <div className={styles.elImg} style={select!==el.id?activeElem:null}>
+            <div
+              className={styles.elImg}
+              style={select !== el.id ? activeElem : null}
+            >
               <img alt="img" src={icon} />
             </div>
           </div>
