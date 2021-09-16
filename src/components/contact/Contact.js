@@ -16,6 +16,7 @@ const Contact = () => {
     phoneValue: phone,
     messageValue: message,
   });
+
   const { t } = useTranslation();
 
   function checkName(e) {
@@ -111,7 +112,7 @@ const Contact = () => {
               value={phone}
               onChange={checkPhone}
               type="text"
-              placeholder="+123 568 6354"
+              placeholder="123 568 6354"
             />
           </div>
         </div>

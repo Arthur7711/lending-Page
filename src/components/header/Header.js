@@ -14,6 +14,7 @@ const Header = () => {
     color: "#fff",
     borderBottom: "2px solid #fff",
   };
+  
   return (
     <div className={styles.header}>
       <LogoPart />
@@ -21,18 +22,18 @@ const Header = () => {
         <div
           onClick={() => changeLanguage("en")}
           className={styles.eng}
-          style={localStorage.i18nextLng==='en' ? activeStyles : null}
+          style={localStorage.i18nextLng === "en" ? activeStyles : null}
         >
           Eng
         </div>
         <div
-          style={localStorage.i18nextLng==='it'  ? activeStyles : null}
+          style={localStorage.i18nextLng === "it" ? activeStyles : null}
           onClick={() => changeLanguage("it")}
           className={styles.itl}
         >
           Itl
         </div>
-        <AlertDialog widthP="144px" heightP="38px" fontP="16px" />
+        <AlertDialog widthP="160px" heightP="34px" fontP="16px" />
       </div>
     </div>
   );

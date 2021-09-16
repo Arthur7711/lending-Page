@@ -9,16 +9,30 @@
   border-radius: 5px;
   padding-top: 30px;
   margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.links .elStyle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .links p {
+  cursor: pointer;
   margin-left: 40px;
-  margin-top: 40px;
+  margin-top: 20px;
   font-family: "Chakra Petch";
-  font-style: normal;
   font-weight: 500;
   font-size: 26px;
   line-height: 34px;
   color: #1e1e1e;
+}
+.elImg {
+  width: 24px;
+  margin-right: 15px;
+}
+.elImg img {
+  width: 100%;
 }
 .textPart {
   background: #ffffff;
