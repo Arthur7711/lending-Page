@@ -16,6 +16,7 @@
 }
 .left .text {
   height: 38px;
+  max-width: 389px;
   font-family: "Noto Sans";
   font-size: 16px;
   line-height: 19px;
@@ -75,7 +76,6 @@
 }
 .forinps input {
   width: 100%;
-  max-width: 330px;
   height: 48px;
   border: 1px solid #abaaaa;
   box-sizing: border-box;
@@ -123,4 +123,40 @@
 }
 .button p {
   color: #ffffff;
+}
+@media (max-width: 1050px) {
+  .right {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  }
+  .forMessage input {
+    width: 100%;
+    max-width: 383px;
+    height: 100px;
+    border: 1px solid #abaaaa;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  .forMessage {
+    margin: 0 50px 0 50px;
+  }
+  .compBtn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 610px) {
+  .contact {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .imgBox {
+    display: none;
+  }
+  .left {
+    max-width: 650px;
+  }
 }
