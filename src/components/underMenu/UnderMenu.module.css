@@ -11,6 +11,7 @@
   border-radius: 5px;
   padding-top: 30px;
   margin-right: 50px;
+  margin-bottom: 25px;
   display: flex;
   flex-direction: column;
 }
@@ -58,4 +59,18 @@
   line-height: 32px;
   color: #1e1e1e;
   margin: 20px;
+}
+
+@media (max-width: 830px) {
+  .infoPart {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-left: 20px;
+  }
+  .elStyle p {
+    font-size: 18px;
+  }
+  .textPart .likeP {
+    font-size: 18px;
+  }
 }
