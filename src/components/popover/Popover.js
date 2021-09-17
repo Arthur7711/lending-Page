@@ -8,14 +8,13 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 
 export default function AlertDialog(props) {
   const [open, setOpen] = React.useState(false);
+  const [name, setName] = React.useState("");
+  const [phone, setPhone] = React.useState("");
 
   const handleClickOpen = () => {
     setOpen(true);
   };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
   const forP = {
     height: 16,
     fontFamily: "Noto Sans",
@@ -48,6 +47,20 @@ export default function AlertDialog(props) {
   };
   const buttonP = {
     color: "#ffffff",
+  };
+
+  function checkName(e) {
+    setName(e.target.value);
+  }
+  function checkPhone(e) {
+    setPhone(e.target.value);
+  }
+
+  const handleClose = () => {
+    setOpen(false);
+    console.log("done");
+    setPhone("");
+    setName("");
   };
 
   return (
@@ -89,13 +102,25 @@ export default function AlertDialog(props) {
           </div>
         </DialogTitle>
         <DialogContent style={{ width: "300px" }} id="alert-dialog-description">
-          <div >
+          <div>
             <p style={forP}>Name</p>
-            <input style={forInp} type="text" placeholder="Name" />
+            <input
+              value={name}
+              onChange={checkName}
+              style={forInp}
+              type="text"
+              placeholder="Name"
+            />
           </div>
           <div>
             <p style={forP}>Phone</p>
-            <input style={forInp} type="text" placeholder="+123 568 6354" />
+            <input
+              value={phone}
+              onChange={checkPhone}
+              style={forInp}
+              type="text"
+              placeholder="123 568 6354"
+            />
           </div>
         </DialogContent>
         <DialogActions>

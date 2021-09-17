@@ -46,7 +46,7 @@ const Contact = () => {
 
   function checking() {
     if (name.length < 1 || name.length >= 255) {
-      console.log("forgot name");
+      alert("forgot name");
       return;
     }
     const re =
