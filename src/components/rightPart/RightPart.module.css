@@ -26,3 +26,23 @@
   margin: 30px;
   color: #6241ff;
 }
+
+@media (max-width: 600px) {
+  .right {
+    width: auto;
+    margin: 30px 30px 0 0;
+    height: auto;
+  }
+  .right h2 {
+    margin: 30px;
+    height: auto;
+    font-size: 34px;
+    line-height: auto;
+  }
+  .right p {
+    margin: 30px;
+    height: auto;
+    font-size: 18px;
+    line-height: auto;
+  }
+}

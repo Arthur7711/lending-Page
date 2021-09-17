@@ -16,10 +16,29 @@
 .textAreas p {
   margin: 30px;
   height: 184px;
-  font-family: Noto Sans;
-  font-style: normal;
+  font-family: "Noto Sans";
   font-weight: 600;
   font-size: 34px;
   line-height: 46px;
   color: #ffffff;
+}
+@media (max-width: 600px) {
+  .textAreas {
+    background: #6241ff;
+    width: auto;
+    margin: 30px 30px 0 0;
+    height: auto;
+  }
+  .textAreas h2 {
+    margin: 30px;
+    height: auto;
+    font-size: 34px;
+    line-height: auto;
+  }
+  .textAreas p {
+    margin: 30px;
+    height: auto;
+    font-size: 18px;
+    line-height: auto;
+  }
 }
