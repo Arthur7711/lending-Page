@@ -5,6 +5,7 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
+import API from "../../API";
 
 export default function AlertDialog(props) {
   const [open, setOpen] = React.useState(false);
@@ -55,7 +56,14 @@ export default function AlertDialog(props) {
   function checkPhone(e) {
     setPhone(e.target.value);
   }
-
+  const data = {
+    name: name,
+    phone: phone,
+  };
+  
+  API.post("createCall", data).then((r) => {
+    console.log(r.data);
+  });
   const handleClose = () => {
     setOpen(false);
     console.log("done");

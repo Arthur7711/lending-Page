@@ -4,6 +4,7 @@ import mail from "../../imgs/Message.png";
 import img from "../../imgs/shuttle.png";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import API from "../../API";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -55,7 +56,7 @@ const Contact = () => {
       alert("wrong email");
       return;
     }
-    if (typeof Number(phone) === "number") {
+    if (phone.length < 1) {
       alert("wrong phone number");
       return;
     }
@@ -63,7 +64,17 @@ const Contact = () => {
       alert("forgot message");
       return;
     }
-    console.log(JSON.stringify(isValid));
+
+    const data = {
+      name: isValid.nameValue,
+      email: isValid.emailValue,
+      phone: isValid.phoneValue,
+      message: isValid.messageValue,
+    };
+    API.post("createCall", data).then((r) => {
+      console.log(r.data);
+    });
+    // console.log(JSON.stringify(isValid));
     setName("");
     setEmail("");
     setPhone("");
