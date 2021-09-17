@@ -14,7 +14,7 @@ const Header = () => {
     color: "#fff",
     borderBottom: "2px solid #fff",
   };
-  
+
   return (
     <div className={styles.header}>
       <LogoPart />
