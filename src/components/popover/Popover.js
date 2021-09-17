@@ -27,7 +27,7 @@ export default function AlertDialog(props) {
     color: " #4c5862",
   };
   const forInp = {
-    width: 330,
+    width: "100%",
     height: 48,
     border: "1px solid #abaaaa",
     boxSizing: "border-box",
@@ -88,8 +88,8 @@ export default function AlertDialog(props) {
             </p>
           </div>
         </DialogTitle>
-        <DialogContent id="alert-dialog-description">
-          <div>
+        <DialogContent style={{ width: "300px" }} id="alert-dialog-description">
+          <div >
             <p style={forP}>Name</p>
             <input style={forInp} type="text" placeholder="Name" />
           </div>
