@@ -7,7 +7,8 @@
   margin: 0 50px 0 0;
 }
 .left {
-  width: 389px;
+  width: 100%;
+  max-width: 389px;
   background: #6241ff;
   position: relative;
   border-top-left-radius: 5px;
@@ -54,6 +55,7 @@
   width: 100%;
 }
 .right {
+  width: 100%;
   display: grid;
   grid-template-rows: 1fr 100px;
   grid-template-columns: 6fr 6fr;
@@ -72,7 +74,8 @@
   color: #4c5862;
 }
 .forinps input {
-  width: 330px;
+  width: 100%;
+  max-width: 330px;
   height: 48px;
   border: 1px solid #abaaaa;
   box-sizing: border-box;
@@ -85,7 +88,8 @@
   align-items: center;
 }
 .forMessage input {
-  width: 383px;
+  width: 100%;
+  max-width: 383px;
   height: 244px;
   border: 1px solid #abaaaa;
   box-sizing: border-box;
