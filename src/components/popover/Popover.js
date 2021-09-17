@@ -56,20 +56,19 @@ export default function AlertDialog(props) {
   function checkPhone(e) {
     setPhone(e.target.value);
   }
-  const data = {
-    name: name,
-    phone: phone,
-  };
-  
-  API.post("createCall", data).then((r) => {
-    console.log(r.data);
-  });
+
   const handleClose = () => {
-    setOpen(false);
-    console.log("done");
+    const data = {
+      name: name,
+      phone: phone,
+    };
+    API.post("createCall", data).then((r) => {
+      console.log(r.data);
+    });
     setPhone("");
     setName("");
   };
+  setOpen(false);
 
   return (
     <div>

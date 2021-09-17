@@ -71,7 +71,7 @@ const Contact = () => {
       phone: isValid.phoneValue,
       message: isValid.messageValue,
     };
-    API.post("createCall", data).then((r) => {
+    API.post("createContact", data).then((r) => {
       console.log(r.data);
     });
     // console.log(JSON.stringify(isValid));
