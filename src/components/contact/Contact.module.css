@@ -149,6 +149,13 @@
     margin-right: 0;
   }
 }
+.adr {
+  color: #fff;
+  margin: 0 15px;
+}
+.forCheckBox {
+  margin: 15px 30px;
+}
 @media (max-width: 610px) {
   .contact {
     display: grid;

@@ -63,7 +63,14 @@ const HomePage = () => {
             E<span>quire</span>
           </p>
         </div>
-        <p>Privacy Policy & Terms of Use</p>
+        <div className={styles.forFooterA}>
+          <a href="https://icarex.ai/privacy-policy/">
+            Privacy Policy & Terms of Use
+          </a>
+        </div>
+        <div className={styles.forFooterA}>
+          <a href="https://icarex.ai/note-legali/">Legal Notes</a>
+        </div>
       </footer>
     </div>
   );

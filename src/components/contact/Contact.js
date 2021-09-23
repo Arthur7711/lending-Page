@@ -71,14 +71,13 @@ const Contact = () => {
       phone: isValid.phoneValue,
       message: isValid.messageValue,
     };
-    fetch('https://equire.company/api/api/createContact', {
-      crossDomain:true,
-      mode:'cors',
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify(data)
-    })
-      .then(response => response.json())
+    fetch("https://equire.company/api/api/createContact", {
+      crossDomain: true,
+      mode: "cors",
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    }).then((response) => response.json());
     // API.post("createCall", data).then((r) => {
     //   console.log(r.data);
     // });
@@ -87,6 +86,9 @@ const Contact = () => {
     setEmail("");
     setPhone("");
     setMessage("");
+    alert(
+      "This site makes use of cookies necessary for its operation and useful for the purposes described on the Privacy Policy page. By scrolling this page, clicking on a link, or continuing to browse in any other way, you are consenting to the use of cookies and accepting our privacy policy."
+    );
     return true;
   }
 
@@ -101,6 +103,10 @@ const Contact = () => {
           </div>
           <p>acquire@equire.company</p>
         </div>
+        <p className={styles.adr}>
+          {" "}
+          Strada Statale del Sempione, 170 – 20016, Pero (MI){" "}
+        </p>
         <div className={styles.imgBox}>
           <img alt="img" src={img} />
         </div>
@@ -139,7 +145,9 @@ const Contact = () => {
           <p>Message</p>
           <input value={message} onChange={checkMessage} type="text" />
         </div>
-        <div></div>
+        <div className={styles.forCheckBox}>
+          <input type="checkbox" /> {t("priv")}
+        </div>
         <div className={styles.compBtn}>
           <div onClick={checking} className={styles.button}>
             <p>{t("contactBtn")}</p>
