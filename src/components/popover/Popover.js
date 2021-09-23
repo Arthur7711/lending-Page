@@ -5,7 +5,6 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import API from "../../API";
 
 export default function AlertDialog(props) {
   const [open, setOpen] = React.useState(false);
@@ -58,18 +57,29 @@ export default function AlertDialog(props) {
   }
 
   const handleClose = () => {
+    setOpen(false);
+    console.log("done");
+    setPhone("");
+    setName("");
+  };
+  const handleSend = () => {
+
     const data = {
       name: name,
       phone: phone,
     };
-    API.post("createCall", data).then((r) => {
-      console.log(r.data);
-    });
-    setPhone("");
-    setName("");
-  };
-  setOpen(false);
+    fetch('https://equire.company/api/api/createCall', {
+      crossDomain:true,
+      mode:'cors',
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(data)
+    })
+      .then(response => response.json())
+  
+    handleClose()
 
+  }
   return (
     <div>
       <MyButton
@@ -131,7 +141,7 @@ export default function AlertDialog(props) {
           </div>
         </DialogContent>
         <DialogActions>
-          <div style={button} onClick={() => handleClose()}>
+          <div style={button} onClick={handleSend}>
             <p style={buttonP}>Send message</p>
           </div>
         </DialogActions>

@@ -20,6 +20,12 @@ const HomePage = () => {
     { text: t("it3"), color: "orange" },
     { text: t("it4"), color: "blue" },
     { text: t("it5"), color: "orange" },
+    { text: t("it6"), color: "blue" },
+    { text: t("it7"), color: "red" },
+    { text: t("it8"), color: "blue" },
+    { text: t("it9"), color: "orange" },
+    { text: t("it10"), color: "blue" },
+    { text: t("it11"), color: "red" },
   ];
   return (
     <div className={styles.home}>

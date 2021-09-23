@@ -71,9 +71,17 @@ const Contact = () => {
       phone: isValid.phoneValue,
       message: isValid.messageValue,
     };
-    API.post("createContact", data).then((r) => {
-      console.log(r.data);
-    });
+    fetch('https://equire.company/api/api/createContact', {
+      crossDomain:true,
+      mode:'cors',
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(data)
+    })
+      .then(response => response.json())
+    // API.post("createCall", data).then((r) => {
+    //   console.log(r.data);
+    // });
     // console.log(JSON.stringify(isValid));
     setName("");
     setEmail("");
