@@ -6,20 +6,20 @@ import styles from "./Header.module.css";
 
 const Header = () => {
   const { i18n } = useTranslation();
-  const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-  };
+  // const changeLanguage = (lang) => {
+  //   i18n.changeLanguage(lang);
+  // };
 
-  const activeStyles = {
-    color: "#fff",
-    borderBottom: "2px solid #fff",
-  };
+  // const activeStyles = {
+  //   color: "#fff",
+  //   borderBottom: "2px solid #fff",
+  // };
 
   return (
     <div className={styles.header}>
       <LogoPart />
       <div className={styles.languageArea}>
-        <div
+        {/* <div
           onClick={() => changeLanguage("en")}
           className={styles.eng}
           style={localStorage.i18nextLng === "en" ? activeStyles : null}
@@ -32,7 +32,7 @@ const Header = () => {
           className={styles.itl}
         >
           Itl
-        </div>
+        </div> */}
         <AlertDialog widthP="160px" heightP="34px" fontP="16px" />
       </div>
     </div>
