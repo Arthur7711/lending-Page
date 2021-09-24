@@ -96,6 +96,13 @@ footer p {
   line-height: 18px;
   color: #4c5862;
 }
+.footerPartDivs {
+  display: flex;
+  justify-content: space-between;
+}
+.footerPartDivs p {
+  color: #1e1e1e;
+}
 
 @media (max-width: 1300px) {
   .relet .imgBox {

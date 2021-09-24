@@ -63,13 +63,21 @@ const HomePage = () => {
             E<span>quire</span>
           </p>
         </div>
-        <div className={styles.forFooterA}>
-          <a href="https://icarex.ai/privacy-policy/">
-            Privacy Policy & Terms of Use
-          </a>
-        </div>
-        <div className={styles.forFooterA}>
-          <a href="https://icarex.ai/note-legali/">Legal Notes</a>
+        <div className={styles.footerPartDivs}>
+          <div>
+            <div className={styles.forFooterA}>
+              <a href="https://icarex.ai/privacy-policy/">
+                Privacy Policy & Terms of Use
+              </a>
+            </div>
+            <div className={styles.forFooterA}>
+              <a href="https://icarex.ai/note-legali/">Legal Notes</a>
+            </div>
+          </div>
+          <div>
+            <p>An iCareX SRL project © iCareX SRL All rights reserved.</p>
+            <p>P.IVA: IT11597630968</p>
+          </div>
         </div>
       </footer>
     </div>
